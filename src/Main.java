@@ -11,8 +11,6 @@ public class Main {
         ConsoleCalculator consoleCalculator = new ConsoleCalculator(parsedString);
 
         System.out.println(consoleCalculator.Calculate());
-
-
     }
 }
 
@@ -69,8 +67,8 @@ class StringParser {
 
 class ConsoleCalculator {
     String[] romeInputNumbers = new String[]{"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
-    String[] romeOutputNumbers = new String[]{"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"};
     ParsedString parsedString;
+    IntToRomanConverter converter = new IntToRomanConverter();
 
     public ConsoleCalculator(ParsedString parsedString) {
         this.parsedString = parsedString;
@@ -121,11 +119,7 @@ class ConsoleCalculator {
                     arithmeticResult = firstNumber % secondNumber;
                     break;
             }
-            for (var i = 0; i < romeOutputNumbers.length; i++) {
-                if (arithmeticResult - 1 == i) {
-                    result = romeOutputNumbers[i];
-                }
-            }
+            result=converter.IntToRoman(arithmeticResult);
         }
 
         if (!firstRomeNumberFlag && !secondRomeNumberFlag) {
@@ -162,5 +156,26 @@ class ConsoleCalculator {
             }
         }
         return result;
+    }
+}
+
+class IntToRomanConverter {
+    public String IntToRoman(int num) {
+        String[] keys = new String[]{"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        var vals = new int[]{100, 90, 50, 40, 10, 9, 5, 4, 1};
+
+        StringBuilder ret = new StringBuilder();
+        int ind = 0;
+
+        while (ind < keys.length) {
+            while (num >= vals[ind]) {
+                var d = num / vals[ind];
+                num = num % vals[ind];
+                for (int i = 0; i < d; i++)
+                    ret.append(keys[ind]);
+            }
+            ind++;
+        }
+        return ret.toString();
     }
 }

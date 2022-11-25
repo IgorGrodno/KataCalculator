@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa7f8063-0119-4b30-b6ae-06f7f3f4f09b" name="Changes" comment="add input parser">
+    <list default="true" id="aa7f8063-0119-4b30-b6ae-06f7f3f4f09b" name="Changes" comment="add calculator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -47,7 +47,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669382508830</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add calculator">
+      <created>1669402007535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669402007535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -63,6 +70,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add input parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="add input parser" />
+    <MESSAGE value="add calculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="add calculator" />
   </component>
 </project>
